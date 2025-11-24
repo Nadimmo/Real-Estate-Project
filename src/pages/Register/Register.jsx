@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Register = () => {
   const { Register, profileUpdate } = useContext(AuthContext);
@@ -17,9 +18,9 @@ const Register = () => {
     // console.log({ name, email, designation, password });
     Register(email, password)
       .then((res) => {
-        profileUpdate(name, designation)        
-        .then((res) => {
-          if (res.data) {
+       
+          if (res.user) {
+            profileUpdate(name, designation)
             Swal.fire({
               title: "Registered successfully!",
               text: "You will be redirected to the home page.",
@@ -29,7 +30,7 @@ const Register = () => {
             navigate("/");
           }
           form.reset();
-        });
+        
       })
       .catch((err) => {
         console.error("Registration error:", err);
