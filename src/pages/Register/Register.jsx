@@ -1,22 +1,35 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
-  const { Register } = useContext(AuthContext);
+  const { Register, profileUpdate } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission logic here
-    const name = e.target.firstName.value;
-    const email = e.target.email.value;
-    const designation = e.target.designation.value;
-    const password = e.target.password.value;
+    const form = e.target;
+    const name = form.firstName.value;
+    const email = form.email.value;
+    const designation = form.designation.value;
+    const password = form.password.value;
     // console.log({ name, email, designation, password });
     Register(email, password)
       .then((res) => {
-        if (res.data) {
-          alert("Registration successful!");
-        }
+        profileUpdate(name, designation)        
+        .then((res) => {
+          if (res.data) {
+            Swal.fire({
+              title: "Registered successfully!",
+              text: "You will be redirected to the home page.",
+              icon: "success",
+              confirmButtonText: "Continue",
+            });
+            navigate("/");
+          }
+          form.reset();
+        });
       })
       .catch((err) => {
         console.error("Registration error:", err);
@@ -121,6 +134,19 @@ const Register = () => {
                 Or continue with
               </span>
             </div>
+          </div>
+
+          {/* Sign In Link */}
+          <div className="mt-6 text-center">
+            <p className="text-sm text-gray-600">
+              Already have an account?
+              <a
+                href="/login"
+                className="ml-1 font-medium text-indigo-600 hover:text-indigo-500"
+              >
+                Sign in here
+              </a>
+            </p>
           </div>
 
           {/* Social Sign-in Section */}
