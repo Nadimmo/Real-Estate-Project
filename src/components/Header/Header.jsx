@@ -71,7 +71,7 @@ const Header = () => {
             to="/"
             className="btn btn-ghost normal-case text-2xl font-bold glass rounded-xl px-4"
           >
-            RealEstate<span className="text-blue-500">Finder</span>
+            Home<span className="text-blue-500">Sphere</span>
           </Link>
         </div>
 
