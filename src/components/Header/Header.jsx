@@ -61,8 +61,8 @@ const Header = () => {
               <Link to="/services" className="hover:text-blue-500 transition">
                 <li>Services</li>
               </Link>
-              <Link to="/contact" className="hover:text-blue-500 transition">
-                <li>Contact</li>
+              <Link to="/property" className="hover:text-blue-500 transition">
+                <li>Property</li>
               </Link>
             </ul>
           </div>
@@ -87,8 +87,8 @@ const Header = () => {
             <Link to="/services" className="hover:text-blue-500 transition">
               <li>Services</li>
             </Link>
-            <Link to="/contact" className="hover:text-blue-500 transition">
-              <li>Contact</li>
+            <Link to="/property" className="hover:text-blue-500 transition">
+              <li>Property</li>
             </Link>
           </ul>
         </div>

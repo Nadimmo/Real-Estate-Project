@@ -6,6 +6,7 @@ import About from '../../pages/About/About';
 import Register from '../../pages/Register/Register';
 import Login from '../../pages/Login/Login';
 import Services from '../../pages/Services/Services';
+import PropertyPage from '../../pages/PropertyPage/PropertyPage';
 
 const Route = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const Route = createBrowserRouter([
       {
         path:"/services",
         element: <Services/>
+      },
+      {
+        path:"/property",
+        element: <PropertyPage/>
       }
       
       
