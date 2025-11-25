@@ -5,8 +5,8 @@ import Home from '../../pages/Home/Home';
 import About from '../../pages/About/About';
 import Register from '../../pages/Register/Register';
 import Login from '../../pages/Login/Login';
-import Services from '../../pages/Services/Services';
 import WeatherSearch from '../../pages/WeatherSearch/WeatherSearch';
+import GlobalCareerGuide from '../../pages/GlobalCareerGuide/GlobalCareerGuide';
 
 const Route = createBrowserRouter([
   {
@@ -30,8 +30,8 @@ const Route = createBrowserRouter([
         element: <Login/>
       },
       {
-        path:"/services",
-        element: <Services/>
+        path:"/global-career-guide",
+        element: <GlobalCareerGuide/>
       },
       {
         path:"/weather-search",
