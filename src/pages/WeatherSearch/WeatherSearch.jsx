@@ -60,8 +60,8 @@ const WeatherSearch = () => {
 
   return (
     <div className="weather-search-container 
-          max-w-md mx-auto mt-16 p-6 bg-white 
-          shadow-xl rounded-xl border border-black ">
+          max-w-md mx-auto mt-20 p-6 bg-white 
+          shadow-xl rounded-xl border border-black min-h-screen ">
 
       <h2 className="text-3xl font-bold mb-6 text-gray-800 text-center">
             Current Weather by Location 🔎

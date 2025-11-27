@@ -45,7 +45,7 @@ const CountryInfo = ({ cityId }) => {
   return (
     <div className=" mx-auto mt-10 p-6 bg-white shadow-lg rounded-xl">
       {country?.length > 0 ? (
-        <div className="grid grid-cols-2 gap-8 ">
+        <div className="grid lg:grid-cols-2 gap-8 ">
           {" "}
           {country?.map((e) => (
             <div

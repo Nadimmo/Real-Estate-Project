@@ -7,6 +7,7 @@ import Register from '../../pages/Register/Register';
 import Login from '../../pages/Login/Login';
 import WeatherSearch from '../../pages/WeatherSearch/WeatherSearch';
 import GlobalCareerGuide from '../../pages/GlobalCareerGuide/GlobalCareerGuide';
+import PrivateRoute from '../../PrivateRoute/PrivateRoute';
 
 const Route = createBrowserRouter([
   {
@@ -35,7 +36,7 @@ const Route = createBrowserRouter([
       },
       {
         path:"/weather-search",
-        element: <WeatherSearch/>
+        element: <PrivateRoute><WeatherSearch/></PrivateRoute>
       }
       
       
