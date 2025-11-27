@@ -69,7 +69,7 @@ const Header = () => {
 
           <Link
             to="/"
-            className="btn btn-ghost normal-case text-2xl font-bold glass rounded-xl px-4"
+            className="btn btn-ghost normal-case lg:text-2xl font-bold glass rounded-xl lg:px-4"
           >
             Home<span className="text-blue-500">Sphere</span>
           </Link>
